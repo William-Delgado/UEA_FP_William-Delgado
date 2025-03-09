@@ -1,7 +1,7 @@
 #UNIVERSIDAD ESTATAL AMAZONICA
 #WILLIAM DELGADO
 #FUNDAMENTOS DE PROGRAMACION
-#Programa 1: Búsqueda en Arreglo Multidimensional
+#Programa 1: REGISTRO DE TEMPERATURAS DIARIAS
 temperaturas = [
     [   # Ciudad 1
         [   # Semana 1
