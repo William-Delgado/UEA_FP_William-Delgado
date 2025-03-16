@@ -1,20 +1,28 @@
 #UNIVERSIDAD ESTATAL AMAZONICA
 #WILLIAM DELGADO
 #FUNDAMENTOS DE PROGRAMACION
-#Programa 1: REGISTRO DE TEMPERATURAS DIARIAS
+#Programa 1: Ejercicio de temperaturas con funcion
+# Función para calcular el promedio de temperaturas por ciudad y semana
 def calcular_promedio_temperaturas(temperaturas, ciudades):
     """
     Calcula el promedio de temperaturas para cada ciudad y semana.
 
     Parámetros:
-    temperaturas: Lista de listas que contiene los datos de temperaturas.
-    ciudades: Lista de nombres de las ciudades.
+    temperaturas (list): Una lista de listas que contiene los datos de temperaturas.
+    ciudades (list): Una lista con los nombres de las ciudades.
+
     """
+    # Recorrer cada ciudad en la lista de temperaturas
     for ciudad_idx, ciudad in enumerate(temperaturas):
+        # Recorrer cada semana en la ciudad actual
         for semana_idx, semana in enumerate(ciudad):
+            # Calcular la suma de temperaturas de la semana actual
             suma_temperaturas = sum([dia["temp"] for dia in semana])
+            # Calcular el promedio de temperaturas de la semana actual
             promedio = suma_temperaturas / len(semana)
+            # Imprimir el resultado
             print(f"Promedio de temperaturas en {ciudades[ciudad_idx]}, Semana {semana_idx + 1}: {promedio:.2f} grados")
+
 
 # Datos de temperaturas
 temperaturas = [
@@ -134,8 +142,8 @@ temperaturas = [
     ]
 ]
 
-# Lista de ciudades
+# Lista de nombres de las ciudades
 ciudades = ["Ciudad 1", "Ciudad 2", "Ciudad 3"]
 
-# Llamada a la función
+# Llamada a la función para calcular e imprimir los promedios
 calcular_promedio_temperaturas(temperaturas, ciudades)
